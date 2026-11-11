@@ -2,76 +2,138 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Dina Portfolio</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Portfolio Dina</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
-<body>
 
-<header class="navbar">
-  <a href="index.html" class="brand">
-    <span class="logo">D</span>
-    <span>Dina<span class="dot">.</span></span>
-  </a>
+<body class="min-h-screen flex flex-col text-white bg-[radial-gradient(circle_at_10%_15%,#8548db_0,transparent_32%),radial-gradient(circle_at_90%_80%,#2936bd_0,transparent_35%),linear-gradient(130deg,#30146c,#10145a_60%,#4921a1)]">
 
-  <button class="menu-btn" aria-label="Buka menu" aria-expanded="false">☰</button>
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 border-b border-purple-300/30 bg-[#0d0c39]/90 backdrop-blur-xl">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
 
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="projects.html">Project</a>
-  </nav>
-</header>
+            <a href="index.html" class="flex items-center gap-3 text-2xl font-extrabold">
+                <span class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-purple-400 to-violet-700 shadow-lg">
+                    D
+                </span>
+                Dina<span class="text-purple-400">.</span>
+            </a>
 
-<main class="page-container">
-  <section class="page-heading">
-    <p class="subtitle">KENALI SAYA LEBIH DEKAT</p>
-    <h1>About <span>Me</span></h1>
-    <p>Berikut sedikit cerita tentang diri saya.</p>
-  </section>
+            <nav class="hidden items-center gap-9 md:flex">
+                <a href="index.html" class="py-2 transition hover:text-purple-300">Home</a>
+                <a href="about.html" class="border-b-2 border-purple-400 py-2 text-purple-300">About</a>
+                <a href="projects.html" class="py-2 transition hover:text-purple-300">Project</a>
+            </nav>
 
-  <section class="about-card">
-    <div class="about-photo-wrapper">
-      <img
-        src="assets/images/dinaa.jpeg"
-        alt="Foto Dina"
-        class="about-photo"
-      >
-    </div>
+            <details class="relative md:hidden">
+                <summary class="list-none cursor-pointer text-3xl">☰</summary>
 
-    <div class="about-content">
-      <h2>Halo, saya Dina!</h2>
+                <nav class="absolute right-0 top-12 flex w-48 flex-col gap-4 rounded-xl border border-purple-300/30 bg-[#17105d] p-5 shadow-xl">
+                    <a href="index.html" class="hover:text-purple-300">Home</a>
+                    <a href="about.html" class="text-purple-300">About</a>
+                    <a href="projects.html" class="hover:text-purple-300">Project</a>
+                </nav>
+            </details>
 
-      <p>
-        Saya merupakan pelajar jurusan Rekayasa Perangkat Lunak
-        (RPL) yang memiliki ketertarikan pada bidang teknologi,
-        pemrograman, dan desain website.
-      </p>
+        </div>
+    </header>
 
-      <p>
-        Saya senang mempelajari hal-hal baru, mencoba membuat
-        project, dan mengembangkan kemampuan saya dalam dunia
-        teknologi.
-      </p>
+    <!-- CONTENT -->
+    <main class="mx-auto w-full max-w-6xl flex-1 px-6 py-14 md:px-10">
 
-      <h3>Keahlian yang Sedang Saya Pelajari</h3>
+        <section class="mb-10 text-center">
 
-      <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>UI Design</span>
-      </div>
-    </div>
-  </section>
-</main>
+            <p class="mb-3 text-xs font-bold tracking-[3px] text-purple-300">
+                KENALI SAYA LEBIH DEKAT
+            </p>
 
-<footer>
-  <p>© <span class="year"></span> Dina Portfolio. All Rights Reserved.</p>
-</footer>
+            <h1 class="text-4xl font-extrabold md:text-5xl">
+                About <span class="text-purple-400">Me</span>
+            </h1>
 
-<script src="assets/script.js"></script>
+            <p class="mt-3 text-sm text-purple-100/80">
+                Berikut sedikit cerita tentang diri saya.
+            </p>
+
+        </section>
+
+        <!-- ABOUT CARD -->
+        <section class="flex flex-col items-center gap-8 rounded-3xl border border-purple-300/30 bg-[#19105b]/70 p-7 shadow-xl backdrop-blur-lg md:flex-row md:p-10">
+
+            <!-- FOTO -->
+            <div class="h-[250px] w-[230px] shrink-0 overflow-hidden rounded-2xl border-2 border-purple-300/70 bg-gradient-to-br from-purple-400 to-indigo-700">
+
+                <img src="assets/images/dinaa.jpeg"
+                     alt="Foto Dina"
+                     class="h-full w-full object-cover object-top">
+
+            </div>
+
+            <!-- BIODATA -->
+            <div class="flex-1 text-center md:text-left">
+
+                <h2 class="mb-4 text-2xl font-bold">
+                    Halo, saya Dina!
+                </h2>
+
+                <p class="mb-3 text-sm leading-8 text-purple-100/90">
+                    Saya merupakan pelajar jurusan Rekayasa Perangkat Lunak
+                    (RPL) yang memiliki ketertarikan pada bidang teknologi,
+                    pemrograman, dan desain website.
+                </p>
+
+                <p class="text-sm leading-8 text-purple-100/90">
+                    Saya senang mempelajari hal-hal baru, mencoba membuat
+                    project, dan mengembangkan kemampuan saya dalam dunia
+                    teknologi.
+                </p>
+
+                <h3 class="mb-4 mt-7 font-semibold">
+                    Keahlian yang Sedang Saya Pelajari
+                </h3>
+
+                <!-- SKILL -->
+                <div class="flex flex-wrap justify-center gap-3 md:justify-start">
+
+                    <span class="rounded-full border border-purple-300/30 bg-purple-400/20 px-4 py-2 text-xs text-purple-100">
+                        HTML
+                    </span>
+
+                    <span class="rounded-full border border-purple-300/30 bg-purple-400/20 px-4 py-2 text-xs text-purple-100">
+                        CSS
+                    </span>
+
+                    <span class="rounded-full border border-purple-300/30 bg-purple-400/20 px-4 py-2 text-xs text-purple-100">
+                        JavaScript
+                    </span>
+
+                    <span class="rounded-full border border-purple-300/30 bg-purple-400/20 px-4 py-2 text-xs text-purple-100">
+                        UI Design
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-purple-300/20 bg-[#0c0a37]/80 px-4 py-5 text-center text-xs text-purple-100">
+        © 2026 Dina Portfolio. All Rights Reserved.
+    </footer>
+
 </body>
 </html>
